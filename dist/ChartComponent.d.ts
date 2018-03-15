@@ -1,10 +1,10 @@
-import { ElementRef, EventEmitter } from '@angular/core';
+import { ElementRef, EventEmitter, AfterViewInit, OnDestroy } from '@angular/core';
 import { ChartSeriesComponent } from './ChartSeriesComponent';
 import { ChartXAxisComponent } from './ChartXAxisComponent';
 import { ChartYAxisComponent } from './ChartYAxisComponent';
 import { HighchartsService } from './HighchartsService';
 import { ChartEvent } from './ChartEvent';
-export declare class ChartComponent {
+export declare class ChartComponent implements AfterViewInit, OnDestroy {
     series: ChartSeriesComponent;
     xAxis: ChartXAxisComponent;
     yAxis: ChartYAxisComponent;
@@ -27,5 +27,6 @@ export declare class ChartComponent {
     options: any;
     private init();
     ngAfterViewInit(): void;
+    ngOnDestroy(): void;
     constructor(element: ElementRef, highchartsService: HighchartsService);
 }
