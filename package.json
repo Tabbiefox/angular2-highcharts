@@ -1,6 +1,6 @@
 {
   "name": "tabbie-angular2-highcharts",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "Highcharts for your Angular2 project",
   "scripts": {
     "watch": "ntsc -w",
